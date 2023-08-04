@@ -22,9 +22,9 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
-    username: {
+    isVerified: {
       type: String,
-      required: true,
+      required: false,
     },
     accountLevel: {
       type: String,
