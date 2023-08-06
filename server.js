@@ -8,6 +8,10 @@ const app = express();
 // connecting to the mongo db
 connectDB();
 
+//middlewares
+app.use(express.json()); // pass incoming data
+
+//Routes
 app.use("/", usersRouter);
 
 const server = http.createServer(app);
