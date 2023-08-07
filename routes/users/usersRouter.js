@@ -10,5 +10,5 @@ usersRouter.post("/register", register);
 //! Route login
 usersRouter.post("/login", login);
 //!profile
-usersRouter.get("/profile/:id", isLogin, getProfile);
+usersRouter.get("/profile/", isLogin, getProfile);
 module.exports = usersRouter;

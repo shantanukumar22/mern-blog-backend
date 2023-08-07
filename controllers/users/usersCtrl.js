@@ -88,7 +88,7 @@ exports.login = async (req, res) => {
 exports.getProfile = async (req, res) => {
   try {
     //! get user id from params
-    const id = req.userAuth.id;
+    const id = req.userAuth._id;
     const user = await User.findById(id);
     console.log(user);
     res.json({
