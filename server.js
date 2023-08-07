@@ -12,7 +12,7 @@ connectDB();
 app.use(express.json()); // pass incoming data
 
 //Routes
-app.use("/", usersRouter);
+app.use("/api/v1/users", usersRouter);
 
 const server = http.createServer(app);
 const PORT = process.env.PORT || 9081;

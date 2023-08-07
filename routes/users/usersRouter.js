@@ -2,9 +2,13 @@ const express = require("express");
 
 const { register } = require("../../controllers/users/usersCtrl");
 const { login } = require("../../controllers/users/usersCtrl");
+const { getProfile } = require("../../controllers/users/usersCtrl");
+const isLogin = require("../../middlewares/isLogin");
 const usersRouter = express.Router();
 //! Route register
-usersRouter.post("/api/v1/users/register", register);
+usersRouter.post("/register", register);
 //! Route login
-usersRouter.post("/api/v1/users/login", login);
+usersRouter.post("/login", login);
+//!profile
+usersRouter.get("/profile/:id", isLogin, getProfile);
 module.exports = usersRouter;
